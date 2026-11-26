@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tizen TV manifest for Our Home. Copied into dist-tv/ by `npm run build:tv`. -->
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
+        id="https://local.our-home/tv" version="1.0.0" viewmodes="maximized">
+  <!-- Keep this ID stable: changing it installs a second, separate app. -->
+  <tizen:application id="OurHome001.Home" package="OurHome001" required_version="3.0" />
+  <name>Our Home</name>
+  <content src="index.html" />
+  <icon src="icon.png" />
+  <tizen:profile name="tv-samsung" />
+  <feature name="http://tizen.org/feature/screen.size.normal.1080.1920" />
+
+  <!-- Open installed apps and read the installed app list. -->
+  <tizen:privilege name="http://tizen.org/privilege/application.launch" />
+  <tizen:privilege name="http://tizen.org/privilege/application.info" />
+  <!-- Receive remote number keys. -->
+  <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice" />
+  <!-- Window management (Home-launcher role). -->
+  <tizen:privilege name="http://tizen.org/privilege/tv.window" />
+  <!-- Weather only. -->
+  <tizen:privilege name="http://tizen.org/privilege/internet" />
+  <access origin="https://api.open-meteo.com" subdomains="false" />
+  <access origin="https://geocoding-api.open-meteo.com" subdomains="false" />
+
+  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable"
+                 encryption="disable" install-location="auto" hwkey-event="enable" />
+</widget>

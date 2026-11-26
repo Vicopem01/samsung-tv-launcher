@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pine-950: oklch(0.245 0.042 164);
+  --pine-900: oklch(0.29 0.052 164);
+  --pine-800: oklch(0.36 0.061 160);
+  --sage-300: oklch(0.82 0.055 145);
+  --sage-200: oklch(0.88 0.045 139);
+  --paper-100: oklch(0.96 0.018 91);
+  --paper-200: oklch(0.91 0.025 91);
+  --citrus-400: oklch(0.86 0.16 102);
+  --coral-400: oklch(0.75 0.135 35);
+  --night-950: oklch(0.21 0.034 224);
+  --night-900: oklch(0.26 0.042 218);
+
+  --color-page: var(--pine-950);
+  --color-surface: var(--pine-900);
+  --color-text: var(--paper-100);
+  --color-muted: var(--sage-200);
+  --color-focus: var(--citrus-400);
+  --color-accent: var(--coral-400);
+
+  --z-scene: 0;
+  --z-content: 1;
+  --z-focus: 2;
+  --z-overlay: 40;
+  --z-dialog: 50;
+  --z-toast: 60;
+
+  font-family: 'Manrope Variable', sans-serif;
+  color: var(--color-text);
+  background: var(--color-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-page);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+  background: var(--color-page);
+}
+
+button,
+a,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button:not(:disabled),
+a {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.32;
+}
+
+::selection {
+  color: var(--pine-950);
+  background: var(--citrus-400);
+}
